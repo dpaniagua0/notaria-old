@@ -17,6 +17,7 @@ class ConceptoController extends AppBaseController
 	function __construct(ConceptoRepository $conceptoRepo)
 	{
 		$this->conceptoRepository = $conceptoRepo;
+		$this->middleware('auth');
 	}
 
 	/**

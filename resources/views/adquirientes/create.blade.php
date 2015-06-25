@@ -1,14 +1,17 @@
-@extends('app')
+@extends('custom')
 
 @section('content')
-<div class="container">
+<div class="row">
+    <div class="col-lg-12">
+        <div class="wrapper wrapper-content">
+            @include('common.errors')
 
-    @include('common.errors')
+            {!! Form::open(['route' => 'adquirientes.store']) !!}
 
-    {!! Form::open(['route' => 'adquirientes.store']) !!}
+            @include('adquirientes.fields')
 
-        @include('adquirientes.fields')
-
-    {!! Form::close() !!}
+            {!! Form::close() !!}
+        </div>
+    </div>
 </div>
 @endsection
