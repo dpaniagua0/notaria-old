@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "24c3946acc997e3f3eca7fc5c99585b2",
+    "hash": "82427afcdfe18956cb4a59198900a084",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -223,6 +223,52 @@
             "time": "2014-12-20 21:24:13"
         },
         {
+            "name": "illuminate/html",
+            "version": "v5.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/illuminate/html.git",
+                "reference": "3d1009bb8e0f25720c914af5c1f4015dd373c9ef"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/illuminate/html/zipball/3d1009bb8e0f25720c914af5c1f4015dd373c9ef",
+                "reference": "3d1009bb8e0f25720c914af5c1f4015dd373c9ef",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/http": "~5.0",
+                "illuminate/session": "~5.0",
+                "illuminate/support": "~5.0",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Illuminate\\Html\\": ""
+                },
+                "files": [
+                    "helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylorotwell@gmail.com"
+                }
+            ],
+            "time": "2015-01-01 16:31:18"
+        },
+        {
             "name": "ircmaxell/password-compat",
             "version": "v1.0.4",
             "source": {
@@ -408,6 +454,49 @@
                 "tokenizer"
             ],
             "time": "2015-03-11 20:06:43"
+        },
+        {
+            "name": "laracasts/flash",
+            "version": "1.3.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laracasts/flash.git",
+                "reference": "a2e237ae34fcc73c4b0755fe51d1ac2063be781e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laracasts/flash/zipball/a2e237ae34fcc73c4b0755fe51d1ac2063be781e",
+                "reference": "a2e237ae34fcc73c4b0755fe51d1ac2063be781e",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Laracasts\\Flash": "src/"
+                },
+                "files": [
+                    "src/Laracasts/Flash/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeffrey Way",
+                    "email": "jeffrey@laracasts.com"
+                }
+            ],
+            "description": "Easy flash notifications",
+            "time": "2015-02-01 20:07:15"
         },
         {
             "name": "laravel/framework",
@@ -620,17 +709,67 @@
             "time": "2015-06-07 21:27:37"
         },
         {
-            "name": "monolog/monolog",
-            "version": "1.13.1",
+            "name": "mitulgolakiya/laravel-api-generator",
+            "version": "v1.3.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "c31a2c4e8db5da8b46c74cf275d7f109c0f249ac"
+                "url": "https://github.com/mitulgolakiya/laravel-api-generator.git",
+                "reference": "7b6fc43e17efca88dfd3e73c256277985d420db9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/c31a2c4e8db5da8b46c74cf275d7f109c0f249ac",
-                "reference": "c31a2c4e8db5da8b46c74cf275d7f109c0f249ac",
+                "url": "https://api.github.com/repos/mitulgolakiya/laravel-api-generator/zipball/7b6fc43e17efca88dfd3e73c256277985d420db9",
+                "reference": "7b6fc43e17efca88dfd3e73c256277985d420db9",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/html": "~5.0",
+                "laracasts/flash": "~1.3",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/Mitul/Generator/Constants/Constants.php"
+                ],
+                "psr-4": {
+                    "Mitul\\": "src/Mitul/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mitul Golakiya",
+                    "email": "me@mitul.me"
+                }
+            ],
+            "description": "Laravel API/Scaffold/CRUD Generator from just one command with including Controller, Repository, Model, Migrations, routes.php update.",
+            "keywords": [
+                "api",
+                "crud",
+                "generator",
+                "laravel",
+                "migration",
+                "model",
+                "scaffold"
+            ],
+            "time": "2015-05-23 19:08:51"
+        },
+        {
+            "name": "monolog/monolog",
+            "version": "1.14.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Seldaek/monolog.git",
+                "reference": "b287fbbe1ca27847064beff2bad7fb6920bf08cc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/b287fbbe1ca27847064beff2bad7fb6920bf08cc",
+                "reference": "b287fbbe1ca27847064beff2bad7fb6920bf08cc",
                 "shasum": ""
             },
             "require": {
@@ -641,12 +780,14 @@
                 "psr/log-implementation": "1.0.0"
             },
             "require-dev": {
-                "aws/aws-sdk-php": "~2.4, >2.4.8",
+                "aws/aws-sdk-php": "^2.4.9",
                 "doctrine/couchdb": "~1.0@dev",
                 "graylog2/gelf-php": "~1.0",
-                "phpunit/phpunit": "~4.0",
-                "raven/raven": "~0.5",
-                "ruflin/elastica": "0.90.*",
+                "php-console/php-console": "^3.1.3",
+                "phpunit/phpunit": "~4.5",
+                "phpunit/phpunit-mock-objects": "2.3.0",
+                "raven/raven": "~0.8",
+                "ruflin/elastica": ">=0.90 <3.0",
                 "swiftmailer/swiftmailer": "~5.3",
                 "videlalvaro/php-amqplib": "~2.4"
             },
@@ -656,6 +797,7 @@
                 "ext-amqp": "Allow sending log messages to an AMQP server (1.0+ required)",
                 "ext-mongo": "Allow sending log messages to a MongoDB server",
                 "graylog2/gelf-php": "Allow sending log messages to a GrayLog2 server",
+                "php-console/php-console": "Allow sending log messages to Google Chrome",
                 "raven/raven": "Allow sending log messages to a Sentry server",
                 "rollbar/rollbar": "Allow sending log messages to Rollbar",
                 "ruflin/elastica": "Allow sending log messages to an Elastic Search server",
@@ -664,7 +806,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.13.x-dev"
+                    "dev-master": "1.14.x-dev"
                 }
             },
             "autoload": {
@@ -690,7 +832,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2015-03-09 09:58:04"
+            "time": "2015-06-19 13:29:54"
         },
         {
             "name": "mtdowling/cron-expression",
@@ -1745,6 +1887,73 @@
                 "environment"
             ],
             "time": "2015-05-30 15:59:26"
+        },
+        {
+            "name": "zizaco/entrust",
+            "version": "dev-laravel-5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Zizaco/entrust.git",
+                "reference": "804000c1c535221792b4e173ecdcc02b5681f5ec"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Zizaco/entrust/zipball/804000c1c535221792b4e173ecdcc02b5681f5ec",
+                "reference": "804000c1c535221792b4e173ecdcc02b5681f5ec",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "~5.0",
+                "illuminate/support": "~5.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "illuminate/database": "~5.0",
+                "mockery/mockery": "dev-master",
+                "phpunit/phpunit": "~4.1",
+                "sami/sami": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/commands"
+                ],
+                "psr-4": {
+                    "Zizaco\\Entrust\\": "src/Entrust/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andrew Elkins",
+                    "homepage": "http://andrewelkins.com"
+                },
+                {
+                    "name": "Zizaco Zizuini",
+                    "email": "zizaco@gmail.com"
+                },
+                {
+                    "name": "Ben Batschelet",
+                    "homepage": "http://github.com/bbatsche"
+                },
+                {
+                    "name": "Michele Angioni",
+                    "email": "michele.angioni@gmail.com"
+                }
+            ],
+            "description": "This package provides a flexible way to add Role-based Permissions to Laravel",
+            "keywords": [
+                "acl",
+                "auth",
+                "illuminate",
+                "laravel",
+                "permission",
+                "roles"
+            ],
+            "time": "2015-05-25 00:17:51"
         }
     ],
     "packages-dev": [
@@ -2025,16 +2234,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "2.1.5",
+            "version": "2.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "be2286cb8c7e1773eded49d9719219e6f74f9e3e"
+                "reference": "631e365cf26bb2c078683e8d9bcf8bc631ac4d44"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/be2286cb8c7e1773eded49d9719219e6f74f9e3e",
-                "reference": "be2286cb8c7e1773eded49d9719219e6f74f9e3e",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/631e365cf26bb2c078683e8d9bcf8bc631ac4d44",
+                "reference": "631e365cf26bb2c078683e8d9bcf8bc631ac4d44",
                 "shasum": ""
             },
             "require": {
@@ -2083,7 +2292,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-06-09 13:05:42"
+            "time": "2015-06-19 07:11:55"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -2219,16 +2428,16 @@
         },
         {
             "name": "phpunit/php-token-stream",
-            "version": "1.4.2",
+            "version": "1.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-token-stream.git",
-                "reference": "db63be1159c81df649cd0260e30249a586d4129e"
+                "reference": "7a9b0969488c3c54fd62b4d504b3ec758fd005d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/db63be1159c81df649cd0260e30249a586d4129e",
-                "reference": "db63be1159c81df649cd0260e30249a586d4129e",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/7a9b0969488c3c54fd62b4d504b3ec758fd005d9",
+                "reference": "7a9b0969488c3c54fd62b4d504b3ec758fd005d9",
                 "shasum": ""
             },
             "require": {
@@ -2264,7 +2473,7 @@
             "keywords": [
                 "tokenizer"
             ],
-            "time": "2015-06-12 07:34:24"
+            "time": "2015-06-19 03:43:16"
         },
         {
             "name": "phpunit/phpunit",
@@ -2816,7 +3025,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "zizaco/entrust": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
