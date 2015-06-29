@@ -93,3 +93,11 @@ Route::get('conceptos/{id}/delete', [
     'as' => 'conceptos.delete',
     'uses' => 'ConceptoController@destroy',
 ]);
+
+
+Route::resource('declaranots', 'DeclaranotController');
+
+Route::get('declaranots/{id}/delete', [
+    'as' => 'declaranots.delete',
+    'uses' => 'DeclaranotController@destroy',
+]);

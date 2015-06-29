@@ -21,7 +21,7 @@
                 </div>
             </li>
             <li>
-                <a href="/home"><i class="fa fa-diamond"></i> <span class="nav-label">{{ trans('global.home') }}</span></a>
+                <a href="/home"><i class="fa fa-home"></i> <span class="nav-label">{{ trans('global.home') }}</span></a>
             </li>
             <li>
                 <a href="/users/"><i class="fa fa-th-large"></i> <span class="nav-label">{{ trans('global.users') }}</span> <span class="fa arrow"></span></a>
