@@ -27,5 +27,8 @@ return [
     "viewpermissions" => "view permissions",
 
     "welcome" => "welcome",
+    "declaranots" => "declaranots",
+    "viewdeclaranots" => "view declaranots",
+    "newdeclaranot" => "add declaranot"
 
 ];
