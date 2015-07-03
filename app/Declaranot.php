@@ -57,7 +57,7 @@ class Declaranot extends Model
 		"colonia_adq" => "required",
 		"municipio_adq" => "required",
 		"entidad_adq" => "required",
-		"correo_adq" => "required,email",
+		"correo_adq" => "required",
 		"codigo_postal_adq" => "required",
 		"fecha_firma_adq" => "required",
 		"complemento_adq" => "required",

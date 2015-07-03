@@ -17,6 +17,7 @@ class DeclaranotController extends AppBaseController
 	function __construct(DeclaranotRepository $declaranotRepo)
 	{
 		$this->declaranotRepository = $declaranotRepo;
+		$this->middleware('auth');
 	}
 
 	/**
