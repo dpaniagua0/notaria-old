@@ -10,7 +10,7 @@
 
             <div class="row">
                 <h1 class="pull-left">Users</h1>
-                <a class="btn btn-primary pull-right" style="margin-top: 25px" href="{!! route('users.create') !!}">Add New</a>
+                <a class="btn btn-primary pull-right" style="margin-top: 25px" href="{!! route('users.create') !!}">{{ trans('global.add') }}</a>
             </div>
 
             <div class="row">
@@ -21,8 +21,7 @@
                     <thead>
                     <th>Name</th>
                     <th>Email</th>
-                    <th>Password</th>
-                    <th width="50px">Action</th>
+                    <th class="text-center"><i class="fa fa-cogs"></i></th>
                     </thead>
                     <tbody>
 
@@ -30,10 +29,9 @@
                     <tr>
                         <td>{!! $user->name !!}</td>
                         <td>{!! $user->email !!}</td>
-                        <td>{!! $user->password !!}</td>
-                        <td>
-                            <a href="{!! route('users.edit', [$user->id]) !!}"><i class="glyphicon glyphicon-edit"></i></a>
-                            <a href="{!! route('users.delete', [$user->id]) !!}" onclick="return confirm('Are you sure wants to delete this User?')"><i class="glyphicon glyphicon-remove"></i></a>
+                        <td class="text-center">
+                            <a href="{!! route('users.edit', [$user->id]) !!}"><i class="fa fa-pencil"></i></a>
+                            <a href="{!! route('users.delete', [$user->id]) !!}" onclick="return confirm('Are you sure wants to delete this User?')"><i class="fa fa-trash-o"></i></a>
                         </td>
                     </tr>
                     @endforeach

@@ -50,7 +50,18 @@ class UserController extends AppBaseController
 	 */
 	public function create()
 	{
-		return view('users.create');
+		$roles = array();
+		$tmp_roles = \DB::table("roles")
+			->select('id','display_name')
+			->get();
+
+
+		foreach($tmp_roles as $role) {
+			$roles[$role->id] = $role->display_name;
+		}
+
+		return view('users.create')
+			->with('roles', $roles);
 	}
 
 	/**

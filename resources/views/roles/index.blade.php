@@ -31,8 +31,8 @@
                         <td>{!! $role->display_name !!}</td>
                         <td>{!! $role->description !!}</td>
                         <td>
-                            <a href="{!! route('roles.edit', [$role->id]) !!}"><i class="glyphicon glyphicon-edit"></i></a>
-                            <a href="{!! route('roles.delete', [$role->id]) !!}" onclick="return confirm('Are you sure wants to delete this Role?')"><i class="glyphicon glyphicon-remove"></i></a>
+                            <a href="{!! route('roles.edit', [$role->id]) !!}"><i class="fa fa-pencil"></i></a>
+                            <a href="{!! route('roles.delete', [$role->id]) !!}" onclick="return confirm('Are you sure wants to delete this Role?')"><i class="fa fa-trash-o"></i></a>
                         </td>
                     </tr>
                     @endforeach

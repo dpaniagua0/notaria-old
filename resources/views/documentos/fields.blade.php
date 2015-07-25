@@ -57,6 +57,6 @@
 </div>
 <!--- Submit Field --->
 <div class="form-group col-sm-12">
-    {!! Form::button('Save', ['class' => 'btn btn-primary', 'type' => 'submit']) !!}
+    {!! Form::button('Guardar', ['class' => 'btn btn-primary', 'type' => 'submit']) !!}
 </div>
 

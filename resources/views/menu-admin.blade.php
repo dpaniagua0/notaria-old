@@ -33,10 +33,10 @@
         <li><a href="/roles/create">{{ trans('global.addrole') }}</a></li>
     </ul>
 </li>
-<li>
+<!--<li>
     <a href="/permissions/"><i class="fa fa-th-large"></i> <span class="nav-label">{{ trans('global.permissions') }}</span> <span class="fa arrow"></span></a>
     <ul class="nav nav-second-level">
         <li><a href="/permissions/">{{ trans('global.viewpermissions') }}</a></li>
         <li><a href="/permissions/create">{{ trans('global.addpermission') }}</a></li>
     </ul>
-</li>
+</li>-->
