@@ -65,7 +65,7 @@ class DeclaranotController extends AppBaseController
 
 		$declaranot = $this->declaranotRepository->store($input);
 
-		Flash::message('Declaranot saved successfully.');
+		Flash::message('Archivo creado.');
 
 		return redirect(route('declaranots.index'));
 	}
@@ -83,7 +83,7 @@ class DeclaranotController extends AppBaseController
 
 		if(empty($declaranot))
 		{
-			Flash::error('Declaranot not found');
+			Flash::error('Archivo no encontado');
 			return redirect(route('declaranots.index'));
 		}
 
@@ -102,7 +102,7 @@ class DeclaranotController extends AppBaseController
 
 		if(empty($declaranot))
 		{
-			Flash::error('Declaranot not found');
+			Flash::error('Archivo no encontrado');
 			return redirect(route('declaranots.index'));
 		}
 
@@ -123,13 +123,13 @@ class DeclaranotController extends AppBaseController
 
 		if(empty($declaranot))
 		{
-			Flash::error('Declaranot not found');
+			Flash::error('Archivo no encontrado');
 			return redirect(route('declaranots.index'));
 		}
 
 		$declaranot = $this->declaranotRepository->update($declaranot, $request->all());
 
-		Flash::message('Declaranot updated successfully.');
+		Flash::message('Archivo actualizado.');
 
 		return redirect(route('declaranots.index'));
 	}
@@ -147,15 +147,27 @@ class DeclaranotController extends AppBaseController
 
 		if(empty($declaranot))
 		{
-			Flash::error('Declaranot not found');
+			Flash::error('Archivo no encontrado');
 			return redirect(route('declaranots.index'));
 		}
 
 		$declaranot->delete();
 
-		Flash::message('Declaranot deleted successfully.');
+		Flash::message('Archivo eliminado.');
 
 		return redirect(route('declaranots.index'));
 	}
 
+	/**
+	 * Generate PDF
+	 *
+	 * @param int $id
+	 *
+	 * @return Response
+	 */
+	public function generatePDF($id){
+		$data = $this->declaranotRepository->findDeclaranotById($id);
+		$pdf = \PDF::loadView('pdf.reporte', array('data' => $data)	);
+		return $pdf->download('reporte.pdf');
+	}
 }

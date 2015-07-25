@@ -29,6 +29,19 @@ return [
     "welcome" => "bienvenido",
     "declaranots" => "declaranots",
     "viewdeclaranots" => "ver declaranots",
-    "newdeclaranot" => "agregar declaranot"
+    "newdeclaranot" => "agregar declaranot",
+    "documents" => "documentos",
+    "viewdocuments" => "ver documentos",
+    "adddocument" => "agregar documento",
+
+
+    "search" => "buscar",
+    "documentnumber" => "numero de documento",
+    "sessionname" => "sesion",
+    "add" => "agregar",
+    "escrituras" => "escrituras",
+    "viewescrituras" => "ver escrituras",
+    "newescritura" => "agregar escritura",
+    "titlenumber" => "numero de escritura",
 
 ];

@@ -39,7 +39,7 @@ return [
 	|
 	*/
 
-	'timezone' => 'UTC',
+	'timezone' => 'America/Mexico_City',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -147,7 +147,8 @@ return [
 		'Zizaco\Entrust\EntrustServiceProvider',
 		'Illuminate\Html\HtmlServiceProvider',
 		'Laracasts\Flash\FlashServiceProvider',
-		'Mitul\Generator\GeneratorServiceProvider'
+		'Mitul\Generator\GeneratorServiceProvider',
+		'Barryvdh\DomPDF\ServiceProvider',
 	],
 
 	/*
@@ -198,7 +199,8 @@ return [
 		'Entrust' => 'Zizaco\Entrust\EntrustFacade',
 		'Form'  => 'Illuminate\Html\FormFacade',
 		'Html'  => 'Illuminate\Html\HtmlFacade',
-		'Flash' => 'Laracasts\Flash\Flash'
+		'Flash' => 'Laracasts\Flash\Flash',
+		'PDF' => 'Barryvdh\DomPDF\Facade',
 	],
 
 ];

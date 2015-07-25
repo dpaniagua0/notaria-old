@@ -101,3 +101,41 @@ Route::get('declaranots/{id}/delete', [
     'as' => 'declaranots.delete',
     'uses' => 'DeclaranotController@destroy',
 ]);
+
+
+Route::resource('documentos', 'DocumentoController');
+
+Route::get('documentos/{id}/delete', [
+    'as' => 'documentos.delete',
+    'uses' => 'DocumentoController@destroy',
+]);
+
+
+Route::resource('tipoDocumentos', 'TipoDocumentoController');
+
+Route::get('tipoDocumentos/{id}/delete', [
+    'as' => 'tipoDocumentos.delete',
+    'uses' => 'TipoDocumentoController@destroy',
+]);
+
+Route::get('documentos/{id}/download',[
+    'as' => 'documentos.download',
+    'uses' => 'DocumentoController@downloadDocument',
+]);
+
+Route::resource('escrituras', 'EscrituraController');
+
+Route::get('escrituras/{id}/delete', [
+    'as' => 'escrituras.delete',
+    'uses' => 'EscrituraController@destroy',
+]);
+
+Route::get('escrituras/{id}/download',[
+    'as' => 'escrituras.download',
+    'uses' => 'EscrituraController@downloadEscritura',
+]);
+
+Route::get('declaranots/{id}/download',[
+    'as' => 'declaranots.download',
+    'uses' => 'DeclaranotController@generatePDF'
+]);

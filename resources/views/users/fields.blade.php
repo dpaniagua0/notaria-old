@@ -13,7 +13,7 @@
 <!--- Password Field --->
 <div class="form-group col-sm-6 col-lg-4">
     {!! Form::label('password', 'Password:') !!}
-    {!! Form::text('password', null, ['class' => 'form-control']) !!}
+    {!! Form::password('password', array('class' => 'form-control')) !!}
 </div>
 
 

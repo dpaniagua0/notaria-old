@@ -28,7 +28,7 @@
 					<th>Codigo Postal</th>
 					<th>Concepto</th>
 					<th>Enajenacion</th>
-					<th>Valor Operacion</th>
+				<!--	<th>Valor Operacion</th>
 					<th>Iva Causado</th>
 					<th>Isr Causado</th>
 					<th>Exento</th>
@@ -44,7 +44,7 @@
 					<th>Declaranot Adq</th>
 					<th>Impuestos Adq</th>
 					<th>Facturas Adq</th>
-					<th>Isai Adq</th>
+					<th>Isai Adq</th>-->
 					<th width="50px">Action</th>
 					</thead>
 					<tbody>
@@ -59,7 +59,7 @@
 						<td>{!! $declaranot->codigo_postal !!}</td>
 						<td>{!! $declaranot->concepto !!}</td>
 						<td>{!! $declaranot->enajenacion !!}</td>
-						<td>{!! $declaranot->valor_operacion !!}</td>
+					<!--	<td>{!! $declaranot->valor_operacion !!}</td>
 						<td>{!! $declaranot->iva_causado !!}</td>
 						<td>{!! $declaranot->isr_causado !!}</td>
 						<td>{!! $declaranot->exento !!}</td>
@@ -75,10 +75,11 @@
 						<td>{!! $declaranot->declaranot_adq !!}</td>
 						<td>{!! $declaranot->impuestos_adq !!}</td>
 						<td>{!! $declaranot->facturas_adq !!}</td>
-						<td>{!! $declaranot->isai_adq !!}</td>
+						<td>{!! $declaranot->isai_adq !!}</td>-->
 						<td>
 							<a href="{!! route('declaranots.edit', [$declaranot->id]) !!}"><i class="glyphicon glyphicon-edit"></i></a>
 							<a href="{!! route('declaranots.delete', [$declaranot->id]) !!}" onclick="return confirm('Are you sure wants to delete this Declaranot?')"><i class="glyphicon glyphicon-remove"></i></a>
+							<a href="{!! route('declaranots.download', [$declaranot->id]) !!}"><i class="fa fa-arrow-circle-o-down"></i></a>
 						</td>
 					</tr>
 					@endforeach

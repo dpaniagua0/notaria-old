@@ -4,19 +4,24 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Laravel</title>
+    <title>Notaria</title>
 
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="/css/plugins/iCheck/custom.css">
+    <link rel="stylesheet" href="/css/plugins/chosen/chosen.css">
+    <link rel="stylesheet" href="/css/plugins/colorpicker/bootstrap-colorpicker.min.css">
+    <link rel="stylesheet" href="/css/plugins/cropper/cropper.min.css">
+    <link rel="stylesheet" href="/css/plugins/switchery/switchery.css">
+    <link rel="stylesheet" href="/css/plugins/jasny/jasny-bootstrap.min.css">
+    <link rel="stylesheet" href="/css/plugins/nouslider/jquery.nouislider.css">
+    <link rel="stylesheet" href="/css/plugins/datapicker/datepicker3.css">
+    <link rel="stylesheet" href="/css/plugins/ionRangeSlider/ion.rangeSlider.css">
+    <link rel="stylesheet" href="/css/plugins/ionRangeSlider/ion.rangeSlider.skinFlat.css">
+    <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" href="/css/style.css">
 
-    <link href="/css/animate.css" rel="stylesheet">
-    <link href="/css/style.css" rel="stylesheet">
-   <!-- <link href="/css/app.css" rel="stylesheet">-->
-
-    <!-- Morris -->
-    <link href="/css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet">
-
+    @yield('app-css')
 
     <!-- Fonts -->
     <link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
@@ -40,46 +45,28 @@
         @include('footer')
     </div>
 </div>
-<!-- Scripts -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="/js/jquery-2.1.1.js"></script>
 <script src="/js/bootstrap.min.js"></script>
-
-
-<script src="/js/plugins/metisMenu/jquery.metisMenu.js"></script>
-<script src="/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
-
-<!-- Flot -->
-<script src="/js/plugins/flot/jquery.flot.js"></script>
-<script src="/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
-<script src="/js/plugins/flot/jquery.flot.spline.js"></script>
-<script src="/js/plugins/flot/jquery.flot.resize.js"></script>
-<script src="/js/plugins/flot/jquery.flot.pie.js"></script>
-<script src="/js/plugins/flot/jquery.flot.symbol.js"></script>
-<script src="/js/plugins/flot/curvedLines.js"></script>
-
-<!-- Peity -->
-<script src="/js/plugins/peity/jquery.peity.min.js"></script>
-<script src="/js/demo/peity-demo.js"></script>
-
-<!-- Custom and plugin javascript -->
 <script src="/js/inspinia.js"></script>
 <script src="/js/plugins/pace/pace.min.js"></script>
+<script src="/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="/js/plugins/chosen/chosen.jquery.js"></script>
+<script src="/js/plugins/jsKnob/jquery.knob.js"></script>
+<script src="/js/plugins/jasny/jasny-bootstrap.min.js"></script>
+<script src="/js/plugins/datapicker/bootstrap-datepicker.js"></script>
+<script src="/js/plugins/nouslider/jquery.nouislider.min.js"></script>
+<script src="/js/plugins/switchery/switchery.js"></script>
+<script src="/js/plugins/ionRangeSlider/ion.rangeSlider.min.js"></script>
+<script src="/js/plugins/iCheck/icheck.min.js"></script>
+<script src="/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="/js/plugins/colorpicker/bootstrap-colorpicker.min.js"></script>
+<script src="/js/plugins/cropper/cropper.min.js"></script>
+<script src="/js/plugins/validate/jquery.validate.min.js"></script>
+<script src="/js/plugins/validate/localization/messages_es.js"></script>
 
-<!-- jQuery UI -->
-<script src="/js/plugins/jquery-ui/jquery-ui.min.js"></script>
+<script src="/js/app.js"></script>
 
-<!-- Jvectormap -->
-<script src="/js/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-<script src="/js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-
-<!-- Sparkline -->
-<script src="/js/plugins/sparkline/jquery.sparkline.min.js"></script>
-
-<!-- Sparkline demo data  -->
-<script src="/js/demo/sparkline-demo.js"></script>
-
-<!-- ChartJS-->
-<script src="/js/plugins/chartJs/Chart.min.js"></script>
+@yield('app-js')
 
 
 </body>

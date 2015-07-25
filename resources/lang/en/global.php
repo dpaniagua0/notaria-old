@@ -29,6 +29,18 @@ return [
     "welcome" => "welcome",
     "declaranots" => "declaranots",
     "viewdeclaranots" => "view declaranots",
-    "newdeclaranot" => "add declaranot"
+    "newdeclaranot" => "add declaranot",
+    "documents" => "documents",
+    "viewdocuments" => "view documents",
+    "adddocument" => "add document",
+
+    "search" => "search",
+    "documentnumber" => "document number",
+    "sessionname" => "session",
+    "add" => "add",
+    "escrituras" => "titles",
+    "viewescrituras" => "view titles",
+    "newescritura" => "add title",
+    "titlenumber" => "title number",
 
 ];

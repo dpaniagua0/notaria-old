@@ -5,6 +5,7 @@ use App\Http\Requests\CreateUserRequest;
 use Illuminate\Http\Request;
 use App\Libraries\Repositories\UserRepository;
 use Mitul\Controller\AppBaseController;
+use App\User;
 use Response;
 use Flash;
 
@@ -61,9 +62,13 @@ class UserController extends AppBaseController
 	 */
 	public function store(CreateUserRequest $request)
 	{
-        $input = $request->all();
+		$user = new User;
+		$user->name  = $request->input('name');
+		$user->email = $request->input('email');
+		$user->password = bcrypt($request->input('password'));
 
-		$user = $this->userRepository->store($input);
+
+		$user->save();
 
 		Flash::message('User saved successfully.');
 
