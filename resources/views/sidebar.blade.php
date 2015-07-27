@@ -24,8 +24,11 @@
                 <a href="/home"><i class="fa fa-home"></i> <span class="nav-label">{{ trans('global.home') }}</span></a>
             </li>
 
-            @if(Auth::user()->hasRole('guest'))
-                @include('menu-guest')
+            @if(Auth::user()->hasRole('archivo'))
+                @include('menu-archivo')
+            @endif
+            @if(Auth::user()->hasRole('declaranot'))
+                @include('menu-declaranot')
             @endif
             @if(Auth::user()->hasRole('admin'))
                 @include('menu-admin')

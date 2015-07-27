@@ -41,4 +41,9 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 		"password" => "required"
 	];
 
+	public function role()
+	{
+		return $this->hasOne('App\Role');
+	}
+
 }

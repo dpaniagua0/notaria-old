@@ -23,4 +23,9 @@ class Role extends EntrustRole
 		"display_name" => "required"
 	];
 
+	public function user()
+	{
+		return $this->belongsTo('App\User');
+	}
+
 }

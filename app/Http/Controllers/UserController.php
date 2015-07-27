@@ -77,9 +77,13 @@ class UserController extends AppBaseController
 		$user->name  = $request->input('name');
 		$user->email = $request->input('email');
 		$user->password = bcrypt($request->input('password'));
-
+		$role_id =  $request->input('role_id');
 
 		$user->save();
+		$insertedId = $user->id;
+		\DB::table('role_user')->insert(
+			['user_id' => $insertedId, 'role_id' => $role_id]
+		);
 
 		Flash::message('User saved successfully.');
 
@@ -114,7 +118,24 @@ class UserController extends AppBaseController
 	 */
 	public function edit($id)
 	{
-		$user = $this->userRepository->findUserById($id);
+		//$user = $this->userRepository->findUserById($id);
+
+		$user = \DB::table('users')
+			->select('users.*' , 'role_user.role_id as role_id')
+			->leftJoin('role_user', 'users.id', '=', 'role_user.user_id')
+			->where('users.id', '=', $id)
+			->first();
+
+
+		$roles = array();
+		$tmp_roles = \DB::table("roles")
+			->select('id','display_name')
+			->get();
+
+
+		foreach($tmp_roles as $role) {
+			$roles[$role->id] = $role->display_name;
+		}
 
 		if(empty($user))
 		{
@@ -122,7 +143,9 @@ class UserController extends AppBaseController
 			return redirect(route('users.index'));
 		}
 
-		return view('users.edit')->with('user', $user);
+		return view('users.edit')
+			->with(compact('user'))
+			->with('roles', $roles);
 	}
 
 	/**
